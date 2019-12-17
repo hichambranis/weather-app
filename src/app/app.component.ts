@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Minimus';
+  showMenu = false;
+
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+  }
 }

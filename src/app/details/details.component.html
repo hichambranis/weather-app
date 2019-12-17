@@ -1,0 +1,16 @@
+<div class="card" style="width: 100%;" *ngIf="weather && cityImage">
+    <img [src]="cityImage" class="card-img-top">
+    <div class="card-body">
+        <h5 class="card-title">{{ weather.location.name }}</h5>
+        <p class="card-text">{{ weather.location.country }} - {{ weather.location.region }}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><img [src]="weather.current.weather_icons[0]"></li>
+        <li class="list-group-item">Temperature: {{ weather.current.temperature }}</li>
+        <li class="list-group-item">Wind speed: {{ weather.current.wind_speed }}</li>
+        <li class="list-group-item">Humidity: {{ weather.current.humidity }}</li>
+    </ul>
+    <div class="card-body">
+        <a [routerLink]="['']" class="card-link">back</a>
+    </div>
+</div>
